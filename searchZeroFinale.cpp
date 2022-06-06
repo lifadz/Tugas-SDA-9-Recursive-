@@ -1,17 +1,17 @@
 #include <iostream>
 using namespace std;
 
-int countZero(int key[], int len, int sequence = 0, int count = 0) {
+int countZero(int key[], int len, int sequence = 0, int numerate = 0) {
 	//kondisi bila nilai sequence belum habis / kosong
 	if (sequence != len) {
 		if (key[sequence] == 0) { //saat nilai sequence = 0, maka nantinya variabel akan bertambah 1
-			count++;
+			numerate++;
 		}
 		sequence++;
-		countZero(key, len, sequence, count);
+		countZero(key, len, sequence, numerate);
 
 	} else {	//setelah di check semua, nantinya akan mengembalikan nilai yang sudah dihitung sebelumnya
-		return count;
+		return numerate;
 	}
 }
 
